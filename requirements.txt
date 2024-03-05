@@ -1,0 +1,4 @@
+pyinstaller==6.2.0
+PyQt6==6.6.1
+pywin32==306
+websockets==12.0

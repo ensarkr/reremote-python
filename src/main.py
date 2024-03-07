@@ -42,12 +42,12 @@ class Main(EventListener):
         if event["update_buttons_on_clients"]:
             self.settings_ws.send_message_to_all_clients(
                 create_update(
-                    {"custom_buttons": self.__base._get_options()["custom_buttons"]}
+                    {"custom_buttons": self.__base._get_custom_buttons()}
                 )
             )
             self.actions_ws.send_message_to_all_clients(
                 create_update(
-                    {"custom_buttons": self.__base._get_options()["custom_buttons"]}
+                    {"custom_buttons": self.__base._get_simplified_custom_buttons()}
                 )
             )
 
